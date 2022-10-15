@@ -37,7 +37,7 @@ def prepare_folders():
 def copy_files_for_test_and_train():
     for path, dirs, files in os.walk(all_images_dir):
         for sub_dir_name in dirs:
-            all_files_list = os.popen(f'find {all_images_dir}/{sub_dir_name} -type f').read().splitlines()
+            all_files_list = os.popen(f'find {all_images_dir}/{sub_dir_name}/*.JPG -type f').read().splitlines()
             images_dir = f'{all_images_dir}/{sub_dir_name}'
             all_image_files_for_class_list = []
             for path, dirs, files in os.walk(images_dir):
