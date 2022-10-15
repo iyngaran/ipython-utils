@@ -3,7 +3,7 @@ import random
 import shutil
 import numpy as np
 
-all_images_dir = "all-images"
+all_images_dir = "lesion-diagnosis"
 image_file_names = []
 
 def prepare_folders():
@@ -77,5 +77,3 @@ def generate_test_and_train_datasets():
     prepare_folders()
     copy_files_for_test_and_train()
     compare_test_and_train_dir()
-
-generate_test_and_train_datasets()
