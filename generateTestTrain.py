@@ -84,7 +84,7 @@ def generate_test_and_train_datasets():
 
 def view_random_image(target_dir, target_class):
     # Setup target directory (we'll view images from here)
-    target_folder = target_dir+target_class
+    target_folder = f'{target_dir}\{target_class}'
 
     # Get a random image path
     random_image = random.sample(os.listdir(target_folder), 1)
